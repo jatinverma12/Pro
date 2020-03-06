@@ -4,8 +4,8 @@ def Func(arr):
         if arr[i]>arr[i+1]:
             f=1
             break
-    Max=max(arr[i+1:])
-    Min=min(arr[i+1:])
+    Max=max(arr[i:])
+    Min=min(arr[i:])
     if f==0:
         print("list is sorted")
     else:
