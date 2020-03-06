@@ -1,3 +1,4 @@
+
 def Func(a,num):
     a.sort()
     p=[]
@@ -6,10 +7,17 @@ def Func(a,num):
         if a[x]>mid:
             break
     i=x-1
-    while num-a[i]<=a[-1]:
+    while num-a[i]<=a[-1] and i>=0:
         if num-a[i] in a[i+1:len(a)]:
             p.append((a[i],num-a[i]))
         i=i-1
-            
-    print(p)
-Func([1,2,3,4,6,12,9],18)
+    
+    if(len(p)):
+        print(p)
+    else:
+        print("sum is not available")
+
+    
+b=list(map(int, input("Enter the numbers").strip().split()))
+n=int(input("Enter the desired sum"))
+Func(b,n)
